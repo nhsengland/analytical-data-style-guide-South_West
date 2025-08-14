@@ -1,0 +1,127 @@
+site_name: Analytical Product Design Guide - South West
+repo_url: https://github.com/hannahmitchell35/analytical-data-style-guide-SW
+repo_name: Analytical Product Design Guide - South West
+edit_uri: edit/main/docs/
+
+plugins:
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+  - search
+  - glightbox
+
+nav:
+  - Home: index.md
+  - About: launch.md
+  - Core Components:
+      - Overview: reporting_corecomponents/index.md
+      - Naming Conventions: reporting_corecomponents/naming_conventions.md
+      - Branding & Visual Identity: reporting_corecomponents/branding_visual.md
+      - RAG Rating: reporting_corecomponents/rag_rating.md
+      - Charts vs Tables: reporting_corecomponents/correct_visuals.md
+      - Writing Narrative: reporting_corecomponents/writing_narrative.md
+      - Data Formatting & Units: reporting_corecomponents/data_formatting_and_units.md
+      - Interaction Design: reporting_corecomponents/interaction_design.md
+      - Component Library: reporting_corecomponents/component_library.md
+      - Utilisation Review: reporting_corecomponents/utilisation_review.md
+      - Governance & Updates: reporting_corecomponents/governance_updates.md
+  - Change Log: change_log.md
+   # - Dashboard lifecycle:
+  #     - Overview: dashboard_lifecycle/index.md
+  #     - Planning cycle: dashboard_lifecycle/planning_cycle.md
+  #     - Sketches, Wireframes and Prototypes: dashboard_lifecycle/sketches_wireframes_prototypes.md
+  # - Dashboard design:
+  #     - dashboard_design/index.md
+  #     - Style guide rules: dashboard_design/quick_summary.md
+  #     - Principles: dashboard_design/principles.md
+  #     - Navigation: dashboard_design/navigation.md
+  #     - Layout: dashboard_design/layout.md
+  #     - Cards: dashboard_design/cards.md
+  #     - Typography: dashboard_design/typography.md
+  #     - Colours: dashboard_design/colours.md
+  #     - Icons & logos: dashboard_design/icons.md
+  #     - Filters & buttons: dashboard_design/filters.md
+  #     - KPIs: dashboard_design/kpis.md
+  #     - Chart types: dashboard_design/chart_types.md
+  #     - Table design: dashboard_design/tables.md
+  #     - Tooltips: dashboard_design/tooltips.md
+  #     - Information & metrics: dashboard_design/information.md
+  #     - Download templates: dashboard_design/download_templates.md
+  # - QA & Testing:
+  # - Training resources:
+  # - Support: support.md
+  # - Glossary: glossary.md
+  # - Useful links: useful_links.md
+  #  - Acknowledgements: acknowledgements.md
+
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: default
+    primary: indigo
+  font:
+    text: Arial
+  logo: images/logo/nhs-blue-on-white.jpg
+  favicon: images/favicon/favicon.ico
+  features:
+    - search.share
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.path
+    - toc.integrate
+    - navigation.top
+  icon:
+    admonition:
+      <type>: material/alert
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/hannahmitchell35/analytical-data-style-guide-SW
+      name: NHS Analytical Product Design Guide - South West
+  generator: false
+
+copyright: Copyright © 2024 Crown Copyright (NHS England)
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+watch:
+  - overrides
